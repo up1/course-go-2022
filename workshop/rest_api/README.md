@@ -54,8 +54,14 @@ $newman run rest-api.postman_collection.json
 Step to run
 ```
 $docker-compose build user
-$docker-compose up -d
+$docker-compose up -d user
+
 $docker-compose ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+rest_api-mongo-1    "docker-entrypoint.s…"   mongo               running (healthy)   0.0.0.0:27017->27017/tcp
+rest_api-redis-1    "docker-entrypoint.s…"   redis               running (healthy)   0.0.0.0:6379->6379/tcp
+rest_api-user-1     "/app/user-service -…"   user                running             0.0.0.0:8000->8000/tcp
+
 $docker-compose logs --follow
 ```
 

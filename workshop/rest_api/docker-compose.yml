@@ -13,6 +13,16 @@ services:
       timeout: 5s
       retries: 5
       start_period: 5s
+
+  redis:
+    image: redis:7.0.4
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
       
   user:
     image: user-service:1.0
@@ -26,4 +36,6 @@ services:
       - "8000:8000"
     depends_on:
       mongo:
+        condition: service_healthy
+      redis:
         condition: service_healthy
