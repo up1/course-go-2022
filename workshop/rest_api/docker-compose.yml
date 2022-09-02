@@ -7,3 +7,23 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: secret
+    healthcheck:
+      test: echo 'db.runCommand({serverStatus:1}).ok' | mongosh -u $$MONGO_INITDB_ROOT_USERNAME -p $$MONGO_INITDB_ROOT_PASSWORD --quiet | grep 1
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+      
+  user:
+    image: user-service:1.0
+    build:
+      context: .
+      dockerfile: cmd/user/Dockerfile
+    command:
+      - -http=8000
+      - -mongodb=mongodb://mongoadmin:secret@mongo:27017
+    ports:
+      - "8000:8000"
+    depends_on:
+      mongo:
+        condition: service_healthy
