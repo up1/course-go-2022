@@ -23,4 +23,21 @@
   * repository/mongodb.go
   * repository/redis.go
 
+## Step to run
+
+Start MongoDB server
+```
+$docker-compose up -d mongo
+```
+
+Start Go server with default configuration
+```
+$go run cmd/user/main.go
+```
+
+Start Go server with custom configuration
+```
+$go run cmd/user/main.go -http :9999 -mongodb address
+```
+
 
