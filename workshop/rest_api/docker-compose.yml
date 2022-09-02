@@ -20,7 +20,7 @@ services:
       context: .
       dockerfile: cmd/user/Dockerfile
     command:
-      - -http=8000
+      - -http=:8000
       - -mongodb=mongodb://mongoadmin:secret@mongo:27017
     ports:
       - "8000:8000"
