@@ -5,17 +5,19 @@
 * Redis
 
 ## Project structure
-* /internal
-  * /web
+* internal
+  * web
     * httpserver.go => Graceful shutdown
     * router.go  => Default router for Gin
-  * /mongodb
-  * /redis
+  * mongodb
+	* mongodb.go
+  * redis
+	* redis.go
 
-* /cmd/user
+* cmd/user
   * main.go
 
-* /user
+* user
   * hanndlers.go
   * service.go
   * repository/mongodb.go
