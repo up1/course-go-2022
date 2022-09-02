@@ -70,4 +70,22 @@ Remove all services
 $docker-compose down
 ```
 
+## Testing with Go + Gin
+Start mongodb server
+```
+$docker-compose up -d mongo
+$docker-compose ps
+NAME                COMMAND                  SERVICE             STATUS              PORTS
+rest_api-mongo-1    "docker-entrypoint.s…"   mongo               running (healthy)   0.0.0.0:27017->27017/tcp
+```
+
+Run tests
+```
+$go test ./...
+$go test ./... -v
+$go test ./... -v -cover
+
+
+```
+
 
