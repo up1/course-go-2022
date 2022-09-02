@@ -40,7 +40,6 @@ Start Go server with custom configuration
 $go run cmd/user/main.go -http :9999 -mongodb address
 ```
 
-
 ## Testing with Postman
 * Postman collection in `postman` folder
   * rest-api.postman_collection.json
@@ -48,6 +47,21 @@ $go run cmd/user/main.go -http :9999 -mongodb address
 Run with [newman](https://www.npmjs.com/package/newman)
 ```
 $newman run rest-api.postman_collection.json
+```
+
+## Build and run with Docker + Docker compose
+
+Step to run
+```
+$docker-compose build user
+$docker-compose up -d
+$docker-compose ps
+$docker-compose logs --follow
+```
+
+Remove all services
+```
+$docker-compose down
 ```
 
 
