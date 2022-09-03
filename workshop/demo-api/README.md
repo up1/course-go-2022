@@ -19,7 +19,7 @@ $docker-compose up -d prometheus
 $docker-compose ps
 ```
 
-Testing with url=`localhost:9090`
+Open url=`localhost:9090` in browser
 
 Start service
 ```
