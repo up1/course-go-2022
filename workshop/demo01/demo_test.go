@@ -5,7 +5,10 @@ import (
 	"testing"
 )
 
-func TestXxx(t *testing.T) {
+func TestFaliCase(t *testing.T) {
 	acc := demo.NewAccountService()
-	acc.CreateAccount("", "")
+	_, err := acc.CreateAccount("", "")
+	if err == nil {
+		t.Fatal();
+	}
 }
