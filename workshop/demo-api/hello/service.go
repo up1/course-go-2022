@@ -10,4 +10,6 @@ func todoNext(ctx context.Context) {
 	defer span.End()
 
 	time.Sleep(20 * time.Nanosecond)
+
+	CallExternalApi(ctx)
 }

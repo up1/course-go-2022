@@ -5,6 +5,7 @@ import (
 
 	"github.com/labstack/echo/v4"
 	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/trace"
 )
 
 type HelloRequest struct {
@@ -36,5 +37,7 @@ func HelloPostHandler(c echo.Context) error {
 }
 
 func HelloHandler(c echo.Context) error {
+	span := trace.SpanFromContext(c.Request().Context())
+	defer span.End()
 	return c.JSON(http.StatusOK, HelloResponse{})
 }
