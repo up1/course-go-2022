@@ -1,6 +1,8 @@
 package internal
 
-import "github.com/go-redis/redis/v8"
+import (
+	"github.com/go-redis/redis/v8"
+)
 
 func NewRedis(url string) *redis.Client {
 	client := redis.NewClient(&redis.Options{
