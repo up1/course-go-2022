@@ -8,8 +8,6 @@ func (hs HelloService) GetDataById(id int) (string, error) {
     return hs.Repo.Get(id)
 }
 
-
-
 type IRepository interface {
 	Get(id int) (string,error)
 }
