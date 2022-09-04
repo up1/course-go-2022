@@ -1,5 +1,7 @@
 package hello
 
+import "github.com/go-redis/redis"
+
 type HelloService struct {
 	Repo IRepository
 }
@@ -13,6 +15,7 @@ type IRepository interface {
 }
 
 type HelloRepository struct{
+	R *redis.Client
 }
 
 func (hr HelloRepository) Get(id int) (string,error) {
