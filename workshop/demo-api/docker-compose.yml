@@ -11,3 +11,13 @@ services:
     image: openzipkin/zipkin
     ports:
       - "9411:9411"
+  
+  redis:
+    image: redis:7.0.4
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 3s
+      retries: 5
