@@ -3,6 +3,9 @@
   * Middleware
     * [Prometheus](https://echo.labstack.com/middleware/prometheus/)
     * [Echo-logrus](https://github.com/neko-neko/echo-logrus)
+* Databases
+  * MongoDB
+  * Redis 
 * Application metric with Prometheus
 * Distributed tracing with Zipkin + Opentelemetry
 * API testing with Postman and newman
