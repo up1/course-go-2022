@@ -2,10 +2,12 @@ package hello_test
 
 import (
 	"api/hello"
-	"fmt"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
+type Day int
 
 type SuccessRepo struct{}
 func (hr SuccessRepo) Get(id int) (string,error) {
@@ -17,5 +19,6 @@ func TestGetSuccess(t *testing.T) {
 	r := SuccessRepo{}
 	s := hello.HelloService{Repo: r}
 	result, err := s.GetDataById(1)
-	fmt.Println(result, err)
+	assert.Nil(t, err)
+	assert.Equal(t, "mock", result)
 }
