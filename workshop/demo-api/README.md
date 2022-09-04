@@ -13,6 +13,16 @@ $docker-compose logs --follow
 ```
 
 ## Application metric with Prometheus
+Config Prometheus.yml
+```
+scrape_configs:
+  - job_name: "my_api"
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+      - targets: ["host.docker.internal:1323"]
+```
+
 Start prometheus server
 ```
 $docker-compose up -d prometheus
