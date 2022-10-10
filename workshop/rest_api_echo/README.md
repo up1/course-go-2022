@@ -1,5 +1,5 @@
 # Demo project with Go
-* Gin web framework
+* Echo v4
 * Logging with logrus
 * MongoDB
 * Redis
@@ -70,7 +70,7 @@ Remove all services
 $docker-compose down
 ```
 
-## Testing with Go + Gin
+## Testing with Go + Echo
 Start mongodb server
 ```
 $docker-compose up -d mongo
