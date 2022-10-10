@@ -85,6 +85,8 @@ $go test ./...
 $go test ./... -v
 $go test ./... -v -cover
 
+// Run test without cache
+$go test -count=1 ./...
 
 ```
 
