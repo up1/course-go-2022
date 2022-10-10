@@ -41,7 +41,10 @@
     * Centralized logging
     * Distributes tracing
     * Application metrics
-    
+
+## Workshop
+* [REST API with Gin](https://github.com/up1/course-go-2022/tree/main/workshop/rest_api_gin)
+* [REST API with Echo](https://github.com/up1/course-go-2022/tree/main/workshop/rest_api_echo)
     
 ## Reference
 * [Go 2021](https://github.com/up1/course-go-2021)
