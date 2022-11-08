@@ -47,7 +47,8 @@
 * [REST API with Echo](https://github.com/up1/course-go-2022/tree/main/workshop/rest_api_echo)
 
 ## Past workshops
-* [2022/20/11-12](https://github.com/up1/workshop-go-20221011)
+* [2022/11/07-10](https://github.com/up1/workshop-g0-202211)
+* [2022/10/11-12](https://github.com/up1/workshop-go-20221011)
     
 ## Reference
 * [Go 2021](https://github.com/up1/course-go-2021)
