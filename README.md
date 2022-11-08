@@ -56,3 +56,4 @@
 * [DevOps with Go](https://github.com/up1/workshop-devops-go)
 * [Go proverbs](https://go-proverbs.github.io/)
 * [Go Concurrency Visualize](https://divan.dev/posts/go_concurrency_visualize/)
+* [Awesome Go](https://github.com/avelino/awesome-go)
