@@ -54,3 +54,4 @@
 * [Go 2021](https://github.com/up1/course-go-2021)
 * [workshop-go-rest-api](https://github.com/up1/workshop-go-rest-api)
 * [DevOps with Go](https://github.com/up1/workshop-devops-go)
+* [Go proverbs](https://go-proverbs.github.io/)
